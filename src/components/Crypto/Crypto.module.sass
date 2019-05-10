@@ -1,0 +1,250 @@
+.Balances, .Deposit, .Withdraw, .TransactionHistory
+  flex: 1
+  display: flex
+  flex-direction: column
+  select
+    position: relative
+    padding: 10px 20px
+    appearance: none
+    border-radius: 10px
+    border: 1px solid #e4e4e4
+    background: #ffffff
+    min-width: 300px
+    color: #4c5888
+    font-family: Muli
+    font-size: 18px
+    font-weight: 600
+    line-height: 21.29px
+    cursor: pointer
+
+.card
+  background: #fff
+  padding: 25px 55px
+  border-radius: 10px
+  border: 1px solid #eeeff6
+
+// #region Balances
+
+.Balances
+  padding: 0 80px
+  h2
+    margin-top: 20px
+  footer
+    width: fit-content
+    font-size: 22px
+    font-weight: 700
+    line-height: 26.17px
+    margin: 0 auto 75px auto
+    display: flex
+    align-items: center
+
+.text
+  text-align: center
+  font-size: 17px
+  font-weight: 700
+  line-height: 20.56px
+  & > div:first-child
+    font-weight: 300
+    margin-bottom: 5px
+
+.wallets
+  flex-grow: 1
+  li
+    display: flex
+    align-items: center
+    margin: 20px 0
+    padding: 20px 25px
+    background: #fff
+    border-radius: 10px
+    border: 1px solid #eeeff6
+
+.curPrice
+  border-left: 1px solid rgba(#dbddeb, .5)
+  border-right: 1px solid rgba(#dbddeb, .5)
+  padding: 0 80px
+
+.balance, .charge
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.balance
+  margin-right: 85px
+  max-width: 530px
+  width: 100%
+.charge
+  flex-grow: 1
+  margin-left: 85px
+  .buttons
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    div
+      width: 100%
+    & > div:first-child
+      margin-bottom: 9px
+
+
+.currency
+  display: flex
+  align-items: center
+  font-size: 36px
+  font-weight: 700
+  line-height: 42.73px
+  .icon
+    width: 70px
+    height: 70px
+    text-align: center
+    margin-right: 35px
+
+// #endregion Balances
+
+
+// #region Deposit
+  
+.Deposit
+  padding: 45px 80px
+  h3
+    margin: 10px 20px
+
+.depositCurrency, .depositAddress, .withdrawCurrency, .withdrawAddress, .withdrawAmounts
+  margin-bottom: 20px
+
+.depositAddress, .withdrawAddress
+  input
+    width: 100%
+    max-width: 480px
+    padding: 10px 20px
+    appearance: none
+    border-radius: 10px
+    border: 1px solid #e4e4e4
+    background: #ffffff
+    color: #4c5888
+    font-family: Muli
+    font-size: 18px
+    font-weight: 600
+    line-height: 21.29px
+
+// #endregion Deposit
+
+
+// #region Withdraw
+
+.Withdraw
+  padding: 45px 80px
+  h3
+    margin: 10px 20px
+
+.withdrawAmounts
+  display: flex
+  input
+    width: 100%
+    max-width: 250px
+    padding: 10px 20px
+    appearance: none
+    border-radius: 10px
+    border: 1px solid #e4e4e4
+    background: #ffffff
+    color: #4c5888
+    font-family: Muli
+    font-size: 18px
+    font-weight: 600
+    line-height: 21.29px
+  h4
+    margin: 5px 11px
+    color: rgba(#4c5888, .7)
+    font-family: Muli
+    font-size: 11px
+    font-weight: 600
+    line-height: 13.57px
+  .separator
+    margin: 0 22px
+
+// #endregion Withdraw
+
+
+// #region TransactionHistory
+
+.TransactionHistory
+  padding: 60px 80px
+  header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: 50px
+    div
+      .headers
+        display: flex
+        align-items: baseline
+        margin-bottom: 20px
+        h2
+          margin-right: 30px
+          color: #2d3560
+          font-size: 29px
+          font-weight: 700
+          line-height: 34.8px
+        span
+          color: #2d3560
+          font-size: 19px
+          font-weight: 300
+          line-height: 22.8px
+
+.THSelect
+  width: fit-content
+  position: relative
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: 50%
+    right: 20px
+    width: 10px
+    height: 10px
+    z-index: 1
+    // TODO: replace arrow, export right one
+    background-image: url('/img/ArrowRight.svg')
+    background-position: center center
+    background-repeat: no-repeat
+    transform: translate(-50%, -50%) rotate(90deg)
+
+.THBody
+  margin-top: 15px
+  table
+    width: 100%
+    border-collapse: collapse
+    thead
+      color: rgba(#2d3560, .3)
+      font-size: 17px
+      font-weight: 600
+      line-height: 20.4px
+      tr td
+        padding: 20px 60px
+    tbody
+      tr
+        position: relative
+        background: #fff 
+        border: 1px solid #eeeff6
+        border-radius: 5px
+        overflow: visible
+        z-index: 1
+        td
+          padding: 15px 60px
+        &:hover
+          box-shadow: 15px 0 20px 0 rgba(#2d3560, .1), -15px 0 20px 0 rgba(#2d3560, .1)
+          transform: scale(1)
+
+.tableControls
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 50px
+  font-size: 19px
+  font-weight: 300
+  line-height: 22.8px
+  img
+    cursor: pointer
+    margin: 0 10px
+  .prev
+    transform: rotate(180deg)
+
+// #endregion TransactionHistory
